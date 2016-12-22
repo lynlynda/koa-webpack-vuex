@@ -1,8 +1,13 @@
 <template>
 <div class="h1">header
   <div class="components-index">
-      <h2 @click="test"> Index for app</h2>
+      <button @click="test"> test1</button>
       <em>{{clickNum}}</em>
+    </div>
+
+     <div class="components-index">
+      <button @click="test2"> test2</button>
+      <em>{{clickNum2}}</em>
     </div>
 </div>
   
@@ -12,12 +17,17 @@
   export default{
     name: 'vheader',
     computed:mapState({ 
-         clickNum: state =>state.addNum.clickNum.length
+         clickNum: state =>state.addNum.clickNum.length,
+         clickNum2: state =>state.addNum.d
     }),
     methods:{
       test(){
         //Actions support the same payload format and object-style dispatch:
-        this.$store.dispatch('addInfo',{txt:'hahah'});
+        this.$store.dispatch('addInfo',{txt:'test1'});
+      },
+      test2(){
+        //Actions support the same payload format and object-style dispatch:
+        this.$store.dispatch('checkout',{txt:'222'});
       }
     }
 

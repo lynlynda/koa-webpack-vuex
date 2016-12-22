@@ -1,6 +1,7 @@
 import * as types from '../mutation-type.js';
 const state = {
-        clickNum: []
+        clickNum: [],
+        d: ''
     }
     // actions
 const actions = {
@@ -15,7 +16,10 @@ const actions = {
 // mutations
 const mutations = {
     [types.CHECKOUT_REQUEST](state) {
-        return state.data;
+        state.d = 1;
+        console.log(state.d);
+        return state.d;
+
     },
     [types.ADD_INFO](state, {
         txt

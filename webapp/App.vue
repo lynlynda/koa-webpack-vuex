@@ -1,20 +1,18 @@
 <template>
-<div id="wrapper">
+<div id="app">
    <vheader></vheader>
    <p>
-    <div class="tab">
-      <div class="item">
-        <router-link to='/zan'>👍</router-link>
-      </div>
-      <div class="item">
-        <router-link to='/cai'>👎</router-link>
-      </div>
-      
-    </div>
-    
-    
-  </p> 
-  <router-view></router-view>
+      <div class="tab">
+        <div class="item">
+          <router-link to='/a'>👍</router-link>
+        </div>
+        <div class="item">
+          <router-link to='/b'>👎</router-link>
+        </div>
+        
+      </div>   
+   </p> 
+   <router-view></router-view>
 </div> 
 
 </template>
@@ -25,7 +23,6 @@
     components: {
       vheader
     }
-
   }
 </script>
 <style>
